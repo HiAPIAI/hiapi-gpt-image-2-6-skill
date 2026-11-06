@@ -603,8 +603,10 @@ export function buildPayload(options = {}) {
     adjustments,
     warnings,
     referenceImages: hasImages ? imageSources.length : 0,
-    // Sources that are local paths and therefore need an upload before create.
-    localSources: imageSources.filter((entry) => !isHttpUrl(entry)),
+    // Sources that are local paths and therefore need an upload before create
+    // (reference images plus a local mask/markup).
+    localSources: [...imageSources, input.mask_url, input.markup_url]
+      .filter((entry) => entry != null && !isHttpUrl(entry)),
   };
 }
 

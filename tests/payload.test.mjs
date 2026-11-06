@@ -356,6 +356,15 @@ test("local sources are accepted by shape and deferred to the upload step", () =
   assert.deepEqual(built.localSources, ["./photo.png"]);
 });
 
+test("a local mask or markup is uploaded even when every reference image is a URL", () => {
+  const masked = buildPayload({ prompt: "p", imageSources: ["https://x/a.png"], mask: "./mask.png" });
+  assert.deepEqual(masked.localSources, ["./mask.png"]);
+  const marked = buildPayload({ prompt: "p", imageSources: ["https://x/a.png"], markup: "./notes.png" });
+  assert.deepEqual(marked.localSources, ["./notes.png"]);
+  const remote = buildPayload({ prompt: "p", imageSources: ["https://x/a.png"], mask: "https://x/m.png" });
+  assert.deepEqual(remote.localSources, []);
+});
+
 test("--svg and --gif conflict with a contradictory explicit format", () => {
   assert.throws(() => buildPayload({ prompt: "p", svg: true, outputFormat: "png" }), /conflicts with --output-format/);
   assert.throws(() => buildPayload({ prompt: "p", gif: true, svg: true }), /conflicts/);
