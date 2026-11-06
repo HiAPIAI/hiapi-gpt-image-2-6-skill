@@ -679,3 +679,22 @@ test("installRelease refuses a version whose manifest is missing", async () => {
   assert.equal(result.ok, false);
   assert.match(result.reason, /HTTP 404/);
 });
+
+test("a policy that is 'required' but names a non-newer latest never triggers an install", async () => {
+  const { runUpdateCheck } = await import("../scripts/lib/update.mjs");
+  const policy = JSON.stringify({ id: "hiapi-gpt-image-2-6", version: "1.0.0", updatePolicy: { latestVersion: "1.0.0", minimumVersion: "1.1.0" } });
+  let releaseFetched = false;
+  const fetchImpl = async (url) => {
+    if (String(url).includes("release/")) releaseFetched = true;
+    return new Response(policy, { status: 200 });
+  };
+  const { mkdtempSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const root = mkdtempSync(join(tmpdir(), "i26-downgrade-"));
+  const out = await runUpdateCheck({ env: { HIAPI_SKILL_POLICY_URLS: "http://policy.invalid/p.json", HIAPI_SKILL_CACHE_DIR: root }, currentVersion: "1.0.2", root, fetchImpl });
+  assert.equal(out.check.status, "required");
+  assert.equal(out.update.status, "skipped");
+  assert.match(out.update.reason, /not newer/);
+  assert.equal(releaseFetched, false);
+});

@@ -17,7 +17,9 @@ import {
 } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
 
-export const DISTRIBUTABLE_EXCLUDED_DIRECTORIES = Object.freeze([".git", "node_modules", "outputs"]);
+// tests/, assets/ (README artwork) and .github/ are repository-only: the
+// installed skill never needs them, and leaving them out keeps every update small.
+export const DISTRIBUTABLE_EXCLUDED_DIRECTORIES = Object.freeze([".git", "node_modules", "outputs", "tests", "assets", ".github"]);
 // Written by the release/install/update machinery itself; never shipped as
 // content. `.hiapi-skill-installed.json` marks an installed copy.
 export const DISTRIBUTABLE_EXCLUDED_FILES = Object.freeze([

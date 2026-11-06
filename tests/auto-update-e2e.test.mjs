@@ -39,6 +39,8 @@ function treeFor(version) {
     "package.json": `${JSON.stringify({ name: SKILL_ID, version }, null, 2)}\n`,
     "scripts/hiapi-gpt-image-2-6.mjs": "#!/usr/bin/env node\nconsole.log('fixture');\n",
     "scripts/lib/version.txt": version,
+    // Not valid UTF-8: proves release files are hashed and written as raw bytes.
+    "scripts/lib/blob.bin": Buffer.from([0x89, 0x50, 0x4e, 0x47, 0xff, 0xfe, 0x00, 0x80, version.length]),
   };
 }
 
@@ -138,7 +140,8 @@ test("end to end: a signed 1.0.1 replaces the installed 1.0.0 files, and 1.0.0 i
     const after = JSON.parse(readFileSync(join(root, ".hiapi-skill-installed.json"), "utf8"));
     assert.equal(after.version, "1.0.1");
     assert.equal(after.source, "auto-update");
-    assert.deepEqual(after.files, ["SKILL.md", "package.json", "scripts/hiapi-gpt-image-2-6.mjs", "scripts/lib/version.txt"]);
+    assert.deepEqual(after.files, ["SKILL.md", "package.json", "scripts/hiapi-gpt-image-2-6.mjs", "scripts/lib/blob.bin", "scripts/lib/version.txt"]);
+    assert.deepEqual(readFileSync(join(root, "scripts/lib/blob.bin")), treeFor("1.0.1")["scripts/lib/blob.bin"]);
 
     // The previous version is backed up outside the skills directory.
     const backup = join(cache, SKILL_ID, "prev-1.0.0");
@@ -212,4 +215,27 @@ test("the signer refuses to run without a key and with an untrusted key id", () 
   });
   assert.notEqual(badVersion.status, 0);
   assert.match(`${badVersion.stdout}${badVersion.stderr}`, /--version <x\.y\.z>/);
+});
+
+test("end to end: a validly signed but older release is never installed (no downgrade)", async () => {
+  const old = await signedRelease("1.0.1");
+  const { baseUrl, close } = await startServer({ "1.0.1": old });
+  const { root } = await installBase();
+  const cache = await mkdtemp(join(tmpdir(), "i26-e2e-cache-"));
+  try {
+    const before = readFileSync(join(root, "SKILL.md"), "utf8");
+    const result = await installRelease({
+      root,
+      version: "1.0.1",
+      currentVersion: "1.0.2",
+      env: { HIAPI_SKILL_RELEASE_BASE_URL: `${baseUrl}/v{version}`, HIAPI_SKILL_CACHE_DIR: cache },
+      fetchImpl: fetch,
+      trustedKeys: TEST_KEYS,
+    });
+    assert.equal(result.ok, false);
+    assert.match(result.reason, /not newer than the installed 1\.0\.2/);
+    assert.equal(readFileSync(join(root, "SKILL.md"), "utf8"), before);
+  } finally {
+    await close();
+  }
 });

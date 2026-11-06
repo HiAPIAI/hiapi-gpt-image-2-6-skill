@@ -129,6 +129,20 @@ async function fetchText(url, { fetchImpl = fetch, timeoutMs = POLICY_TIMEOUT_MS
   }
 }
 
+// Release files may be binary (PNG and other assets), so they are hashed as raw
+// bytes; decoding them as UTF-8 text would corrupt them.
+async function fetchBytes(url, { fetchImpl = fetch, timeoutMs = POLICY_TIMEOUT_MS } = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetchImpl(url, { signal: controller.signal, redirect: "follow" });
+    const bytes = Buffer.from(await response.arrayBuffer());
+    return { ok: response.ok, status: response.status, bytes };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function extractPolicy(body) {
   if (!body || typeof body !== "object") return null;
   if (Array.isArray(body.skills)) {
@@ -333,10 +347,10 @@ function restoreBackup(root, backupDir, backedUp, written) {
   }
 }
 
-async function downloadRelease({ version, skillId, fetchImpl, deadline, env, trustedKeys }) {
+async function downloadRelease({ version, currentVersion, skillId, fetchImpl, deadline, env, trustedKeys }) {
   const base = releaseBaseUrl(version, env);
   const remaining = () => Math.max(0, deadline - Date.now());
-  const manifestResponse = await fetchText(`${base}/release/manifest.json`, {
+  const manifestResponse = await fetchBytes(`${base}/release/manifest.json`, {
     fetchImpl,
     timeoutMs: Math.max(1, Math.min(remaining(), 10000)),
   });
@@ -347,12 +361,17 @@ async function downloadRelease({ version, skillId, fetchImpl, deadline, env, tru
   });
   if (!signatureResponse.ok) return { error: `release signature download failed with HTTP ${signatureResponse.status}` };
 
-  const manifestBytes = Buffer.from(manifestResponse.text, "utf8");
+  const manifestBytes = manifestResponse.bytes;
   const parsed = parseManifest(manifestBytes);
   if (parsed.error) return { error: parsed.error };
   const manifest = parsed.manifest;
   if (manifest.version !== version) {
     return { error: `release manifest version ${manifest.version} does not match the published ${version}` };
+  }
+  // Never install an older or equal release, even when it is validly signed:
+  // an old signed release may carry a fixed bug or vulnerability.
+  if (currentVersion && compareVersions(manifest.version, currentVersion) <= 0) {
+    return { error: `release ${manifest.version} is not newer than the installed ${currentVersion}` };
   }
   // Test injection is a function argument only. The environment cannot add a
   // key: an attacker who controls env vars must not be able to authorise their
@@ -369,12 +388,12 @@ async function downloadRelease({ version, skillId, fetchImpl, deadline, env, tru
     const url = `${base}/${entry.path.split("/").map(encodeURIComponent).join("/")}`;
     let response;
     try {
-      response = await fetchText(url, { fetchImpl, timeoutMs: Math.max(1, Math.min(remaining(), 10000)) });
+      response = await fetchBytes(url, { fetchImpl, timeoutMs: Math.max(1, Math.min(remaining(), 10000)) });
     } catch (error) {
       return { error: `download failed for ${entry.path}: ${error?.message || error}` };
     }
     if (!response.ok) return { error: `download failed for ${entry.path}: HTTP ${response.status}` };
-    const bytes = Buffer.from(response.text, "utf8");
+    const bytes = response.bytes;
     if (bytes.length !== entry.size) return { error: `size mismatch for ${entry.path} (expected ${entry.size}, got ${bytes.length})` };
     if (sha256Hex(bytes) !== entry.sha256) return { error: `sha256 mismatch for ${entry.path}` };
     files.push({ path: entry.path, sha256: entry.sha256, size: entry.size, bytes });
@@ -399,7 +418,7 @@ export async function installRelease({
 }) {
   const cacheDir = cacheDirFor(skillId, env);
   const deadline = Date.now() + (Number(env.HIAPI_SKILL_UPDATE_DOWNLOAD_BUDGET_MS) || DOWNLOAD_TOTAL_BUDGET_MS);
-  const downloaded = await downloadRelease({ version, skillId, fetchImpl, deadline, env, trustedKeys });
+  const downloaded = await downloadRelease({ version, currentVersion, skillId, fetchImpl, deadline, env, trustedKeys });
   if (downloaded.error) return { ok: false, reason: downloaded.error };
 
   const lock = acquireLock(join(cacheDir, "update.lock"));
@@ -501,6 +520,9 @@ export async function runUpdateCheck(options = {}) {
     };
   }
   const skip = (reason) => ({ check, update: { attempted: false, status: "skipped", reason } });
+  // A policy can say "required" while naming a latest version that is not newer
+  // than this copy (misconfiguration or tampering). Never downgrade.
+  if (compareVersions(check.latestVersion, currentVersion) <= 0) return skip(`policy latest ${check.latestVersion} is not newer than ${currentVersion}`);
   if (!options.force && isAutoUpdateDisabled(env, { noAutoUpdate: options.noAutoUpdate })) return skip("auto-update is off");
   if (String(env.CI || "").toLowerCase() === "true") return skip("CI environment");
   if (String(env.HIAPI_SKILL_REEXEC || "") === "1") return skip("re-executed child process");
