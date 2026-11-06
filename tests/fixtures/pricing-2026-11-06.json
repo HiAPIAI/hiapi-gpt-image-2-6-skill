@@ -1,0 +1,1749 @@
+{
+ "_capturedAt": "2026-11-06",
+ "_source": "https://api.hiapi.ai/api/pricing",
+ "rows": [
+  {
+   "model_id": 306,
+   "model_name": "gpt-image-2.6-sunburst/image-to-image",
+   "description": "{\"zh\": \"GPT Image 2.6 Sunburst 是 OpenAI 新一代图像模型中更重细节的一款，medium 及以上质量下多轮编辑细节更一致，支持 1K/2K/4K 分辨率、15 种画幅比例与五档质量。\", \"en\": \"GPT Image 2.6 Sunburst is the detail-focused model in OpenAI's new image generation, keeping details more consistent across edits at medium quality and above, with 1K/2K/4K resolution, 15 aspect ratios and five quality tiers.\"}",
+   "vendor_id": 1,
+   "quota_type": 0,
+   "model_ratio": 37.5,
+   "model_price": 0,
+   "owner_by": "",
+   "completion_ratio": 2,
+   "enable_groups": [
+    "default",
+    "agent",
+    "free-tools"
+   ],
+   "supported_endpoint_types": [
+    "task"
+   ],
+   "pricing_version": "f1a31e9cf9cb4805a757caebb8136be4dc6cc18aac2b53e78956bf07c26cf56a:1:llm:adea3385559432fb5a1528b1b15dc89d3ec61346c764fe82da09b838179f44c7",
+   "base_usd_value": 0.023,
+   "base_display_unit": {
+    "en": "per output image",
+    "zh": "每张输出图片"
+   },
+   "policies": [
+    {
+     "name": "LOW, 1K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.023,
+     "usd_value": 0.023
+    },
+    {
+     "name": "LOW, 2K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.042,
+     "usd_value": 0.042
+    },
+    {
+     "name": "LOW, 4K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 1K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.041,
+     "usd_value": 0.041
+    },
+    {
+     "name": "MEDIUM, 2K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 4K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.133,
+     "usd_value": 0.133
+    },
+    {
+     "name": "HIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.049,
+     "usd_value": 0.049
+    },
+    {
+     "name": "HIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.09,
+     "usd_value": 0.09
+    },
+    {
+     "name": "HIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.087,
+     "usd_value": 0.087
+    },
+    {
+     "name": "XHIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.283,
+     "usd_value": 0.283
+    },
+    {
+     "name": "MAX, 1K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.195,
+     "usd_value": 0.195
+    },
+    {
+     "name": "MAX, 2K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.36,
+     "usd_value": 0.36
+    },
+    {
+     "name": "MAX, 4K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.636,
+     "usd_value": 0.636
+    }
+   ],
+   "addons": [
+    {
+     "key": "reference-images",
+     "type": "array_length",
+     "path": "image_urls",
+     "unit_price": "0.012",
+     "unit_size": "1",
+     "minimum": "1",
+     "maximum": "16",
+     "missing": "error",
+     "display": "Per Reference Image",
+     "display_unit": {
+      "en": "image",
+      "zh": "张"
+     }
+    }
+   ],
+   "category": "image",
+   "subcategory": "image-to-image",
+   "task_capabilities": [
+    "image-to-image"
+   ],
+   "output_type": "image",
+   "pinned_rank": 999,
+   "badge_text_zh": "新品",
+   "badge_text_en": "New",
+   "example_prompt": "Keep the same foundry hall architecture, arches, chains and cooling channels. Transform all metal into pale ice and frost, cold blue moonlight through the roof, frozen steam, keep geometry, no people, no text, no logo.",
+   "example_default_size": "16:9"
+  },
+  {
+   "model_id": 305,
+   "model_name": "gpt-image-2.6-sunburst/text-to-image",
+   "description": "{\"zh\": \"GPT Image 2.6 Sunburst 是 OpenAI 新一代图像模型中更重细节的一款，medium 及以上质量下多轮编辑细节更一致，支持 1K/2K/4K 分辨率、15 种画幅比例与五档质量。\", \"en\": \"GPT Image 2.6 Sunburst is the detail-focused model in OpenAI's new image generation, keeping details more consistent across edits at medium quality and above, with 1K/2K/4K resolution, 15 aspect ratios and five quality tiers.\"}",
+   "vendor_id": 1,
+   "quota_type": 0,
+   "model_ratio": 37.5,
+   "model_price": 0,
+   "owner_by": "",
+   "completion_ratio": 2,
+   "enable_groups": [
+    "default",
+    "agent",
+    "free-tools"
+   ],
+   "supported_endpoint_types": [
+    "task"
+   ],
+   "base_usd_value": 0.023,
+   "base_display_unit": {
+    "en": "per output image",
+    "zh": "每张输出图片"
+   },
+   "policies": [
+    {
+     "name": "LOW, 1K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.023,
+     "usd_value": 0.023
+    },
+    {
+     "name": "LOW, 2K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.042,
+     "usd_value": 0.042
+    },
+    {
+     "name": "LOW, 4K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 1K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.041,
+     "usd_value": 0.041
+    },
+    {
+     "name": "MEDIUM, 2K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 4K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.133,
+     "usd_value": 0.133
+    },
+    {
+     "name": "HIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.049,
+     "usd_value": 0.049
+    },
+    {
+     "name": "HIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.09,
+     "usd_value": 0.09
+    },
+    {
+     "name": "HIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.087,
+     "usd_value": 0.087
+    },
+    {
+     "name": "XHIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.283,
+     "usd_value": 0.283
+    },
+    {
+     "name": "MAX, 1K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.195,
+     "usd_value": 0.195
+    },
+    {
+     "name": "MAX, 2K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.36,
+     "usd_value": 0.36
+    },
+    {
+     "name": "MAX, 4K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.636,
+     "usd_value": 0.636
+    },
+    {
+     "name": "SVG, LOW, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.053,
+     "usd_value": 0.053
+    },
+    {
+     "name": "SVG, LOW, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.072,
+     "usd_value": 0.072
+    },
+    {
+     "name": "SVG, LOW, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.105,
+     "usd_value": 0.105
+    },
+    {
+     "name": "SVG, MEDIUM, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.071,
+     "usd_value": 0.071
+    },
+    {
+     "name": "SVG, MEDIUM, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.105,
+     "usd_value": 0.105
+    },
+    {
+     "name": "SVG, MEDIUM, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.163,
+     "usd_value": 0.163
+    },
+    {
+     "name": "SVG, HIGH, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.079,
+     "usd_value": 0.079
+    },
+    {
+     "name": "SVG, HIGH, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.12,
+     "usd_value": 0.12
+    },
+    {
+     "name": "SVG, HIGH, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.19,
+     "usd_value": 0.19
+    },
+    {
+     "name": "SVG, XHIGH, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.117,
+     "usd_value": 0.117
+    },
+    {
+     "name": "SVG, XHIGH, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.19,
+     "usd_value": 0.19
+    },
+    {
+     "name": "SVG, XHIGH, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.313,
+     "usd_value": 0.313
+    },
+    {
+     "name": "SVG, MAX, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.225,
+     "usd_value": 0.225
+    },
+    {
+     "name": "SVG, MAX, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.39,
+     "usd_value": 0.39
+    },
+    {
+     "name": "SVG, MAX, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.666,
+     "usd_value": 0.666
+    },
+    {
+     "name": "GIF, LOW, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.07,
+     "usd_value": 0.07
+    },
+    {
+     "name": "GIF, MEDIUM, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.124,
+     "usd_value": 0.124
+    },
+    {
+     "name": "GIF, HIGH, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.15,
+     "usd_value": 0.15
+    },
+    {
+     "name": "GIF, XHIGH, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.266,
+     "usd_value": 0.266
+    },
+    {
+     "name": "GIF, MAX, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.598,
+     "usd_value": 0.598
+    }
+   ],
+   "category": "image",
+   "subcategory": "text-to-image",
+   "task_capabilities": [
+    "text-to-image"
+   ],
+   "output_type": "image",
+   "pinned_rank": 999,
+   "badge_text_zh": "新品",
+   "badge_text_en": "New",
+   "example_prompt": "Cinematic night photograph of an empty copper foundry hall, cooling channels of dull red metal, hanging chains, brick arches, precise industrial geometry, deep blacks and copper highlights, museum-grade realism, no people, no text, no logo, no watermark.",
+   "example_default_size": "16:9"
+  },
+  {
+   "model_id": 303,
+   "model_name": "gpt-image-2.6-flare/text-to-image",
+   "description": "{\"zh\": \"GPT Image 2.6 Flare 是 OpenAI 新一代图像模型中出图更快的一款，适合快速迭代，支持 1K/2K/4K 分辨率、15 种画幅比例与五档质量。\", \"en\": \"GPT Image 2.6 Flare is the faster model in OpenAI's new image generation, suited to rapid iteration, with 1K/2K/4K resolution, 15 aspect ratios and five quality tiers.\"}",
+   "vendor_id": 1,
+   "quota_type": 0,
+   "model_ratio": 37.5,
+   "model_price": 0,
+   "owner_by": "",
+   "completion_ratio": 2,
+   "enable_groups": [
+    "default",
+    "agent",
+    "free-tools"
+   ],
+   "supported_endpoint_types": [
+    "task"
+   ],
+   "base_usd_value": 0.023,
+   "base_display_unit": {
+    "en": "per output image",
+    "zh": "每张输出图片"
+   },
+   "policies": [
+    {
+     "name": "LOW, 1K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.023,
+     "usd_value": 0.023
+    },
+    {
+     "name": "LOW, 2K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.042,
+     "usd_value": 0.042
+    },
+    {
+     "name": "LOW, 4K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 1K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.041,
+     "usd_value": 0.041
+    },
+    {
+     "name": "MEDIUM, 2K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 4K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.133,
+     "usd_value": 0.133
+    },
+    {
+     "name": "HIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.049,
+     "usd_value": 0.049
+    },
+    {
+     "name": "HIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.09,
+     "usd_value": 0.09
+    },
+    {
+     "name": "HIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.087,
+     "usd_value": 0.087
+    },
+    {
+     "name": "XHIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.283,
+     "usd_value": 0.283
+    },
+    {
+     "name": "MAX, 1K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.195,
+     "usd_value": 0.195
+    },
+    {
+     "name": "MAX, 2K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.36,
+     "usd_value": 0.36
+    },
+    {
+     "name": "MAX, 4K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.636,
+     "usd_value": 0.636
+    },
+    {
+     "name": "SVG, LOW, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.053,
+     "usd_value": 0.053
+    },
+    {
+     "name": "SVG, LOW, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.072,
+     "usd_value": 0.072
+    },
+    {
+     "name": "SVG, LOW, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.105,
+     "usd_value": 0.105
+    },
+    {
+     "name": "SVG, MEDIUM, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.071,
+     "usd_value": 0.071
+    },
+    {
+     "name": "SVG, MEDIUM, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.105,
+     "usd_value": 0.105
+    },
+    {
+     "name": "SVG, MEDIUM, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.163,
+     "usd_value": 0.163
+    },
+    {
+     "name": "SVG, HIGH, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.079,
+     "usd_value": 0.079
+    },
+    {
+     "name": "SVG, HIGH, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.12,
+     "usd_value": 0.12
+    },
+    {
+     "name": "SVG, HIGH, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.19,
+     "usd_value": 0.19
+    },
+    {
+     "name": "SVG, XHIGH, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.117,
+     "usd_value": 0.117
+    },
+    {
+     "name": "SVG, XHIGH, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.19,
+     "usd_value": 0.19
+    },
+    {
+     "name": "SVG, XHIGH, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.313,
+     "usd_value": 0.313
+    },
+    {
+     "name": "SVG, MAX, 1K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.225,
+     "usd_value": 0.225
+    },
+    {
+     "name": "SVG, MAX, 2K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.39,
+     "usd_value": 0.39
+    },
+    {
+     "name": "SVG, MAX, 4K",
+     "rule": {
+      "output_format": {
+       "match": "svg"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.666,
+     "usd_value": 0.666
+    },
+    {
+     "name": "GIF, LOW, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.07,
+     "usd_value": 0.07
+    },
+    {
+     "name": "GIF, MEDIUM, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.124,
+     "usd_value": 0.124
+    },
+    {
+     "name": "GIF, HIGH, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.15,
+     "usd_value": 0.15
+    },
+    {
+     "name": "GIF, XHIGH, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.266,
+     "usd_value": 0.266
+    },
+    {
+     "name": "GIF, MAX, 1K, 2K, 4K",
+     "rule": {
+      "output_format": {
+       "match": "gif"
+      },
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": [
+        "1K",
+        "2K",
+        "4K"
+       ]
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.598,
+     "usd_value": 0.598
+    }
+   ],
+   "category": "image",
+   "subcategory": "text-to-image",
+   "task_capabilities": [
+    "text-to-image"
+   ],
+   "output_type": "image",
+   "pinned_rank": 999,
+   "badge_text_zh": "新品",
+   "badge_text_en": "New",
+   "example_prompt": "Cut-paper collage of a single cobalt origami crane hanging on a cotton thread above stacked kraft cardboard boxes in a sunlit packing room. Hard graphic shadows, limited palette of cobalt, kraft brown and cream, tactile torn-paper edges, no people, no text, no logo, no watermark.",
+   "example_default_size": "1:1"
+  },
+  {
+   "model_id": 304,
+   "model_name": "gpt-image-2.6-flare/image-to-image",
+   "description": "{\"zh\": \"GPT Image 2.6 Flare 是 OpenAI 新一代图像模型中出图更快的一款，适合快速迭代，支持 1K/2K/4K 分辨率、15 种画幅比例与五档质量。\", \"en\": \"GPT Image 2.6 Flare is the faster model in OpenAI's new image generation, suited to rapid iteration, with 1K/2K/4K resolution, 15 aspect ratios and five quality tiers.\"}",
+   "vendor_id": 1,
+   "quota_type": 0,
+   "model_ratio": 37.5,
+   "model_price": 0,
+   "owner_by": "",
+   "completion_ratio": 2,
+   "enable_groups": [
+    "default",
+    "agent",
+    "free-tools"
+   ],
+   "supported_endpoint_types": [
+    "task"
+   ],
+   "base_usd_value": 0.023,
+   "base_display_unit": {
+    "en": "per output image",
+    "zh": "每张输出图片"
+   },
+   "policies": [
+    {
+     "name": "LOW, 1K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.023,
+     "usd_value": 0.023
+    },
+    {
+     "name": "LOW, 2K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.042,
+     "usd_value": 0.042
+    },
+    {
+     "name": "LOW, 4K",
+     "rule": {
+      "quality": {
+       "match": "low"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 1K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.041,
+     "usd_value": 0.041
+    },
+    {
+     "name": "MEDIUM, 2K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.075,
+     "usd_value": 0.075
+    },
+    {
+     "name": "MEDIUM, 4K",
+     "rule": {
+      "quality": {
+       "match": "medium"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.133,
+     "usd_value": 0.133
+    },
+    {
+     "name": "HIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.049,
+     "usd_value": 0.049
+    },
+    {
+     "name": "HIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.09,
+     "usd_value": 0.09
+    },
+    {
+     "name": "HIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "high"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 1K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.087,
+     "usd_value": 0.087
+    },
+    {
+     "name": "XHIGH, 2K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.16,
+     "usd_value": 0.16
+    },
+    {
+     "name": "XHIGH, 4K",
+     "rule": {
+      "quality": {
+       "match": "xhigh"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.283,
+     "usd_value": 0.283
+    },
+    {
+     "name": "MAX, 1K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "1K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.195,
+     "usd_value": 0.195
+    },
+    {
+     "name": "MAX, 2K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "2K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.36,
+     "usd_value": 0.36
+    },
+    {
+     "name": "MAX, 4K",
+     "rule": {
+      "quality": {
+       "match": "max"
+      },
+      "resolution": {
+       "match": "4K"
+      }
+     },
+     "pricing_type": "fixed",
+     "pricing_value": 0.636,
+     "usd_value": 0.636
+    }
+   ],
+   "addons": [
+    {
+     "key": "reference-images",
+     "type": "array_length",
+     "path": "image_urls",
+     "unit_price": "0.012",
+     "unit_size": "1",
+     "minimum": "1",
+     "maximum": "16",
+     "missing": "error",
+     "display": "Per Reference Image",
+     "display_unit": {
+      "en": "image",
+      "zh": "张"
+     }
+    }
+   ],
+   "category": "image",
+   "subcategory": "image-to-image",
+   "task_capabilities": [
+    "image-to-image"
+   ],
+   "output_type": "image",
+   "pinned_rank": 999,
+   "badge_text_zh": "新品",
+   "badge_text_en": "New",
+   "example_prompt": "Keep the same origami crane, thread and stacked boxes. Restyle the entire scene as a Japanese indigo shibori textile still life: deep indigo cloth background, white resist patterns, soft fabric folds, no paper collage look, no people, no text, no logo.",
+   "example_default_size": "1:1"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "family": "gpt-image-2.6",
+  "skillId": "hiapi-gpt-image-2-6",
+  "skillName": "HiAPI GPT Image 2.6",
+  "version": "1.0.0",
+  "status": "release",
+  "publicRepo": "HiAPIAI/hiapi-gpt-image-2-6-skill",
+  "modelIds": [
+    "gpt-image-2.6-flare/text-to-image",
+    "gpt-image-2.6-flare/image-to-image",
+    "gpt-image-2.6-sunburst/text-to-image",
+    "gpt-image-2.6-sunburst/image-to-image"
+  ],
+  "cover": "assets/social-preview-gpt-image-2-6.png",
+  "centralDirectory": "hiapiai/_wt-image26/hiapi-skills",
+  "relatedRepositories": [
+    "hiapiai/_wt-image26/awesome-gpt-image-2-prompts"
+  ],
+  "requiredFiles": [
+    "scripts/hiapi-gpt-image-2-6.mjs",
+    "scripts/lib/contract.mjs",
+    "scripts/lib/payload.mjs",
+    "scripts/lib/pricing.mjs",
+    "scripts/lib/api.mjs",
+    "scripts/lib/upload.mjs",
+    "scripts/lib/png.mjs",
+    "scripts/lib/cli.mjs",
+    "scripts/lib/dist.mjs",
+    "scripts/lib/update.mjs",
+    "scripts/release-sign.mjs",
+    "MIGRATION.md",
+    "llms.txt"
+  ],
+  "publicContractMarkers": [
+    "gpt-image-2.6-flare/text-to-image",
+    "gpt-image-2.6-flare/image-to-image",
+    "gpt-image-2.6-sunburst/text-to-image",
+    "gpt-image-2.6-sunburst/image-to-image",
+    "svg",
+    "gif",
+    "mask_url"
+  ],
+  "forbiddenPublicClaims": [
+    "unlimited images",
+    "native vector editing",
+    "原生矢量编辑",
+    "unlimited generations"
+  ],
+  "liveContractCommand": "npm run check:contract",
+  "testCommand": "npm test"
+}

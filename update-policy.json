@@ -1,0 +1,11 @@
+{
+  "id": "hiapi-gpt-image-2-6",
+  "version": "1.0.0",
+  "updatePolicy": {
+    "latestVersion": "1.0.0",
+    "minimumVersion": "1.0.0",
+    "updateCommand": "npx -y github:HiAPIAI/hiapi-gpt-image-2-6-skill -y",
+    "notice": "GPT Image 2.6 skill 1.0.0 adds SVG and GIF output, masked local edits, dry-run cost estimates, and signed automatic updates within the 1.x line.",
+    "requiredNotice": "Run GPT Image 2.6 skill 1.0.0 or later. Automatic updates verify an Ed25519 signature before replacing files; set HIAPI_SKILL_AUTO_UPDATE=off to disable them."
+  }
+}

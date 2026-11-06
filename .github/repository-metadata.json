@@ -1,0 +1,20 @@
+{
+  "description": "HiAPI GPT Image 2.6 Agent Skill for Codex and Claude Code: text-to-image, image-to-image, SVG and GIF output with Flare and Sunburst",
+  "homepage": "https://hiapi.ai/en/models/gpt-image-2.6-flare-text-to-image",
+  "topics": [
+    "hiapi",
+    "gpt-image-2-6",
+    "agent-skills",
+    "ai-image-generation",
+    "image-editing",
+    "svg",
+    "gif",
+    "codex",
+    "claude-code",
+    "flare",
+    "sunburst"
+  ],
+  "socialPreview": "assets/social-preview-gpt-image-2-6.png",
+  "applyAutomatically": false,
+  "note": "Release-time intent only. This file does not apply GitHub About, topics, homepage, or social-preview settings automatically."
+}

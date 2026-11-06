@@ -1,0 +1,833 @@
+{
+ "_capturedAt": "2026-11-06",
+ "_source": "https://api.hiapi.ai/api/promotions",
+ "items": [
+  {
+   "slug": "signup-bonus-200",
+   "start_at": 1792488275,
+   "end_at": 2051222400,
+   "paused": false,
+   "activity_type": "content",
+   "execution_mode": "config_only",
+   "rule_config": {
+    "benefit": {
+     "type": "",
+     "price_multiplier_bps": 0
+    },
+    "audience": {
+     "mode": "all"
+    },
+    "model_ids": []
+   },
+   "placements": [
+    "activity_page",
+    "popup"
+   ],
+   "active_version": 1,
+   "i18n": {
+    "en": {
+     "title": "Sign up and get 200 credits",
+     "summary": "New HiAPI users receive 200 credits instantly for API calls and Playground.",
+     "content_html": "<h2>200 credits on sign-up</h2><p>Create your HiAPI account and get 200 credits automatically — no coupon needed. Credits work for API calls, Playground and image creation.</p><p>Check your balance in the console. Credits do not expire.</p>"
+    },
+    "zh": {
+     "title": "新用户注册赠 200 积分",
+     "summary": "注册 HiAPI 即赠 200 积分，可用于 API 调用与 Playground 体验全部模型。",
+     "content_html": "<h2>注册即享 200 积分</h2><p>新用户注册 HiAPI 账号即自动获得 200 积分赠额，无需兑换码。积分可用于 API 调用、Playground 模型体验与图片创作。</p><p>赠额到账后可在控制台查看余额，长期有效。</p>"
+    }
+   },
+   "cta": {
+    "href": "/sign",
+    "label": {
+     "en": "Sign up now",
+     "zh": "立即注册"
+    }
+   }
+  },
+  {
+   "slug": "programmers-day-image-5-fold",
+   "start_at": 1791475200,
+   "end_at": 1792995018,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "gpt-image-2.5-flare/text-to-image",
+     "gpt-image-2.5-flare/image-to-image",
+     "gpt-image-2.5-sunburst/text-to-image",
+     "gpt-image-2.5-sunburst/image-to-image",
+     "nano-banana-2",
+     "nano-banana-pro",
+     "gemini-nano-banana-2.1"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 5000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 4,
+   "i18n": {
+    "en": {
+     "title": "Programmers’ Day · 50% off image creation",
+     "summary": "Turn ideas into images with GPT Image 2.5 Flare / Sunburst, Nano Banana 2, 2.1 and Pro. All users save 50% during the offer.",
+     "content_html": "<h2>Build with code. Create with images.</h2><p>Save 50% on GPT Image 2.5 Flare / Sunburst, Nano Banana 2, Nano Banana 2.1 and Nano Banana Pro.</p><p>October 9, 2026 at 00:00 to November 9, 2026 at 00:00 (UTC+8). Automatically applied to all users in the API and Playground, across existing pricing variants. No coupon needed. Cannot be combined with other model pricing offers.</p>"
+    },
+    "zh": {
+     "title": "程序员节 · 图片创作限时 5 折",
+     "summary": "GPT Image 2.5 Flare / Sunburst、Nano Banana 2、2.1 与 Pro，陪你把想法做成作品。活动期间全体用户自动享受 5 折。",
+     "content_html": "<h2>写代码，也创造画面。</h2><p>程序员节期间，GPT Image 2.5 Flare / Sunburst、Nano Banana 2、Nano Banana 2.1 与 Nano Banana Pro 按标准价格的 50% 计费。</p><p>活动时间：2026 年 10 月 9 日 00:00 至 11 月 9 日 00:00（北京时间）。全体用户自动享受，无需优惠码；API 与 Playground 均可参与。覆盖参与模型的原有计费规格，不与其他模型价格优惠叠加。</p>"
+    }
+   },
+   "cta": {
+    "href": "/promotions/programmers-day-image-5-fold#models",
+    "label": {
+     "en": "Create now",
+     "zh": "立即创作"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "gemini-nano-banana-2.1": {
+      "image": "https://static.hiapi.ai/model-examples/gemini-nano-banana-2.1/2026/10/08/1791466473082-3e77d5c2a1ef0ef6-coastal-fashion-2k.webp",
+      "title": {
+       "en": "Nano Banana 2.1",
+       "zh": "Nano Banana 2.1"
+      },
+      "summary": {
+       "en": "Text-to-image and reference editing. Save 50% across 1K, 2K and 4K.",
+       "zh": "支持文生图与参考图编辑，1K / 2K / 4K 均享 5 折。"
+      }
+     },
+     "gpt-image-2.5-flare/image-to-image": {
+      "title": {
+       "en": "GPT Image 2.5 Flare",
+       "zh": "GPT Image 2.5 Flare"
+      },
+      "summary": {
+       "en": "Text-to-image and reference-image creation. Save 50% across 1K, 2K and 4K.",
+       "zh": "支持文生图与参考图创作，1K / 2K / 4K 均享 5 折。"
+      }
+     },
+     "gpt-image-2.5-flare/text-to-image": {
+      "title": {
+       "en": "GPT Image 2.5 Flare",
+       "zh": "GPT Image 2.5 Flare"
+      },
+      "summary": {
+       "en": "Text-to-image and reference-image creation. Save 50% across 1K, 2K and 4K.",
+       "zh": "支持文生图与参考图创作，1K / 2K / 4K 均享 5 折。"
+      }
+     },
+     "gpt-image-2.5-sunburst/image-to-image": {
+      "title": {
+       "en": "GPT Image 2.5 Sunburst",
+       "zh": "GPT Image 2.5 Sunburst"
+      },
+      "summary": {
+       "en": "Text-to-image and reference-image creation. Save 50% across 1K, 2K and 4K.",
+       "zh": "支持文生图与参考图创作，1K / 2K / 4K 均享 5 折。"
+      }
+     },
+     "gpt-image-2.5-sunburst/text-to-image": {
+      "title": {
+       "en": "GPT Image 2.5 Sunburst",
+       "zh": "GPT Image 2.5 Sunburst"
+      },
+      "summary": {
+       "en": "Text-to-image and reference-image creation. Save 50% across 1K, 2K and 4K.",
+       "zh": "支持文生图与参考图创作，1K / 2K / 4K 均享 5 折。"
+      }
+     },
+     "nano-banana-2": {
+      "title": {
+       "en": "Nano Banana 2",
+       "zh": "Nano Banana 2"
+      },
+      "summary": {
+       "en": "Create images from text or references",
+       "zh": "用文字或参考图创作图片"
+      }
+     },
+     "nano-banana-pro": {
+      "title": {
+       "en": "Nano Banana Pro",
+       "zh": "Nano Banana Pro"
+      },
+      "summary": {
+       "en": "Create images from text or references",
+       "zh": "用文字或参考图创作图片"
+      }
+     }
+    },
+    "copy": {
+     "eyebrow": {
+      "en": "1024 · PROGRAMMERS’ DAY",
+      "zh": "1024 程序员节"
+     },
+     "title": {
+      "en": "Create images.\nSave 50%.",
+      "zh": "图片创作，\n限时 5 折"
+     },
+     "description": {
+      "en": "Turn ideas into images with GPT Image 2.5 Flare / Sunburst, Nano Banana 2, 2.1 and Pro. All users save 50% during the offer.",
+      "zh": "GPT Image 2.5 Flare / Sunburst、Nano Banana 2、2.1 与 Pro，陪你把想法做成作品。活动期间全体用户自动享受 5 折。"
+     }
+    }
+   }
+  },
+  {
+   "slug": "gpt-image-2-6-family-launch-8-fold",
+   "start_at": 1793973600,
+   "end_at": 1794578400,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "gpt-image-2.6-flare/text-to-image",
+     "gpt-image-2.6-flare/image-to-image",
+     "gpt-image-2.6-sunburst/text-to-image",
+     "gpt-image-2.6-sunburst/image-to-image"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 2,
+   "i18n": {
+    "en": {
+     "title": "GPT Image 2.6 launch offer: 20% off",
+     "summary": "All four Flare and Sunburst models, text-to-image and image-to-image, are included. All users save 20% in the API and Playground during the offer.",
+     "content_html": "<h2>GPT Image 2.6 launch offer: 20% off</h2><p>GPT Image 2.6 is OpenAI&#39;s new image generation model, with 1K/2K/4K resolution, 15 aspect ratios and five quality tiers from low to max.</p><ul><li><strong>Flare</strong> (gpt-image-2.6-flare/text-to-image, gpt-image-2.6-flare/image-to-image): faster output, suited to rapid iteration.</li><li><strong>Sunburst</strong> (gpt-image-2.6-sunburst/text-to-image, gpt-image-2.6-sunburst/image-to-image): detail-focused, keeping details more consistent across edits at medium quality and above.</li><li>Text-to-image returns PNG, JPEG and WebP, plus SVG vectors and GIF animations; image-to-image accepts up to 16 reference images.</li></ul><p>Runs from November 6, 2026 at 22:00 to November 13, 2026 at 22:00 (UTC+8). Automatically applied to all users in the API and Playground across every resolution, quality tier, SVG, GIF and reference-image fee. No coupon needed. Cannot be combined with other model pricing offers.</p>"
+    },
+    "zh": {
+     "title": "GPT Image 2.6 上新限时 8 折",
+     "summary": "Flare 与 Sunburst 的文生图、图生图 4 个模型同时参加，活动期间全体用户通过 API 与 Playground 自动享受 8 折。",
+     "content_html": "<h2>GPT Image 2.6 上新，限时 8 折</h2><p>GPT Image 2.6 是 OpenAI 新一代图像模型，支持 1K/2K/4K 分辨率、15 种画幅比例与 low 到 max 五档质量。</p><ul><li><strong>Flare</strong>（gpt-image-2.6-flare/text-to-image、gpt-image-2.6-flare/image-to-image）：出图更快，适合快速迭代。</li><li><strong>Sunburst</strong>（gpt-image-2.6-sunburst/text-to-image、gpt-image-2.6-sunburst/image-to-image）：更重细节，medium 及以上质量下多轮编辑细节更一致。</li><li>文生图支持 PNG、JPEG、WebP，以及 SVG 矢量图和 GIF 动图输出；图生图最多 16 张参考图。</li></ul><p>活动时间：2026 年 11 月 6 日 22:00 至 11 月 13 日 22:00（北京时间）。全体用户自动享受 8 折，API 与 Playground 均可参与，所有分辨率、质量档、SVG、GIF 和参考图费用都按折后价计费，无需优惠码，不与其他模型价格优惠叠加。</p>"
+    }
+   },
+   "cta": {
+    "href": "/promotions/gpt-image-2-6-family-launch-8-fold",
+    "label": {
+     "en": "Create now",
+     "zh": "立即创作"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "gpt-image-2.6-flare/image-to-image": {
+      "title": {
+       "en": "Flare image-to-image: quick edits from references",
+       "zh": "Flare 图生图：参考图快速改稿"
+      },
+      "summary": {
+       "en": "Up to 16 reference images, 1K to 4K output.",
+       "zh": "最多 16 张参考图，1K 到 4K 输出。"
+      }
+     },
+     "gpt-image-2.6-flare/text-to-image": {
+      "title": {
+       "en": "Flare: faster output for rapid iteration",
+       "zh": "Flare：出图更快，适合快速迭代"
+      },
+      "summary": {
+       "en": "Text-to-image can also return SVG vectors and GIF animations.",
+       "zh": "文生图还能直接输出 SVG 矢量图和 GIF 动图。"
+      }
+     },
+     "gpt-image-2.6-sunburst/image-to-image": {
+      "title": {
+       "en": "Sunburst image-to-image: consistent multi-round edits",
+       "zh": "Sunburst 图生图：多轮编辑细节一致"
+      },
+      "summary": {
+       "en": "Details stay consistent across edits at medium quality and above.",
+       "zh": "medium 及以上质量下，多轮编辑细节保持一致。"
+      }
+     },
+     "gpt-image-2.6-sunburst/text-to-image": {
+      "title": {
+       "en": "Sunburst: built for detail",
+       "zh": "Sunburst：更重细节"
+      },
+      "summary": {
+       "en": "Steadier detail at medium quality and above, with SVG and GIF output too.",
+       "zh": "medium 及以上质量细节更稳，同样支持 SVG 与 GIF 输出。"
+      }
+     }
+    },
+    "copy": {
+     "eyebrow": {
+      "en": "NEW MODEL LAUNCH",
+      "zh": "新模型上新"
+     },
+     "title": {
+      "en": "GPT Image 2.6\n20% off at launch",
+      "zh": "GPT Image 2.6\n上新 8 折"
+     },
+     "description": {
+      "en": "Flare and Sunburst text-to-image and image-to-image are live. All users save 20% automatically during the offer.",
+      "zh": "Flare 与 Sunburst 文生图、图生图现已上线，活动期间全体用户自动享受 8 折。"
+     }
+    }
+   }
+  },
+  {
+   "slug": "kling-4-0-family-launch-8-fold",
+   "start_at": 1793246400,
+   "end_at": 1793851200,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "kling-4.0/text-to-video",
+     "kling-4.0/image-to-video"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 1,
+   "i18n": {
+    "en": {
+     "title": "Kling 4.0 launch offer: 20% off",
+     "summary": "Both text-to-video and image-to-video are included: clips up to 30 seconds with synchronized audio. All users save 20% in the API and Playground during the offer.",
+     "content_html": "<h2>Kling 4.0 launch offer: 20% off</h2><p>Kling 4.0 is Kuaishou&#39;s latest video model. It generates picture and synchronized audio together, with clips up to 30 seconds at 720p or 1080p.</p><ul><li><strong>Text-to-Video</strong> (kling-4.0/text-to-video): turn a prompt into a clip in 16:9, 9:16, 1:1 or 21:9.</li><li><strong>Image-to-Video</strong> (kling-4.0/image-to-video): pair a first-frame image with a motion prompt for a 3–30 second clip; framing follows the source image when unspecified.</li></ul><p>Runs from October 29, 2026 at 12:00 to November 5, 2026 at 12:00 (UTC+8). Automatically applied to all users in the API and Playground at 720p and 1080p for every duration. No coupon needed. Cannot be combined with other model pricing offers.</p>"
+    },
+    "zh": {
+     "title": "可灵 Kling 4.0 上新限时 8 折",
+     "summary": "文生视频、图生视频两个模型同时参加，最长 30 秒，画面与同步音频一起生成。活动期间全体用户通过 API 与 Playground 自动享受 8 折。",
+     "content_html": "<h2>可灵 Kling 4.0，上新限时 8 折</h2><p>Kling 4.0 是快手可灵的新一代视频模型，画面和同步音频一起生成，单条最长 30 秒，输出 720p 或 1080p。</p><ul><li><strong>文生视频</strong>（kling-4.0/text-to-video）：一段文字生成视频，支持 16:9、9:16、1:1、21:9 画幅。</li><li><strong>图生视频</strong>（kling-4.0/image-to-video）：一张首帧图加一段描述，生成 3–30 秒视频，不指定画幅时跟随首帧比例。</li></ul><p>活动时间：2026 年 10 月 29 日 12:00 至 11 月 5 日 12:00（北京时间）。全体用户自动享受 8 折，API 与 Playground 均可参与，720p 与 1080p 全部时长都按折后价计费，无需优惠码，不与其他模型价格优惠叠加。</p>"
+    }
+   },
+   "cta": {
+    "href": "/promotions/kling-4-0-family-launch-8-fold",
+    "label": {
+     "en": "Generate now",
+     "zh": "立即生成"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "kling-4.0/image-to-video": {
+      "image": "https://static.hiapi.ai/admin-assets/kling-4-0/2026/10/23/1792768031619-646977549835af69-i2v-cover.jpg",
+      "title": {
+       "en": "Bring a still image to life",
+       "zh": "让一张图动起来"
+      },
+      "summary": {
+       "en": "A first frame plus a motion prompt makes a 3–30 second clip.",
+       "zh": "首帧图加动作描述，生成 3–30 秒视频。"
+      }
+     },
+     "kling-4.0/text-to-video": {
+      "image": "https://static.hiapi.ai/admin-assets/kling-4-0/2026/10/23/1792768025882-1b1ade885a9f95eb-t2v-cover.jpg",
+      "title": {
+       "en": "Prompt to video with sound",
+       "zh": "一段文字生成有声视频"
+      },
+      "summary": {
+       "en": "Up to 30 seconds in 16:9, 9:16, 1:1 or 21:9.",
+       "zh": "最长 30 秒，16:9、9:16、1:1、21:9 四种画幅。"
+      }
+     }
+    },
+    "copy": {
+     "eyebrow": {
+      "en": "NEW MODEL LAUNCH",
+      "zh": "新模型上新"
+     },
+     "title": {
+      "en": "Kling 4.0\n20% off at launch",
+      "zh": "可灵 Kling 4.0\n上新 8 折"
+     },
+     "description": {
+      "en": "Kling 4.0 text-to-video and image-to-video are live. All users save 20% automatically during the offer.",
+      "zh": "Kling 4.0 文生视频、图生视频现已上线，活动期间全体用户自动享受 8 折。"
+     }
+    }
+   }
+  },
+  {
+   "slug": "flux-3-image-launch-8-fold",
+   "start_at": 1792062000,
+   "end_at": 1792666800,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "flux-3-image"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 2,
+   "i18n": {
+    "en": {
+     "title": "FLUX.3 Image launch offer: 20% off",
+     "summary": "Create from text or edit with reference images, from 768 to 4K. All users save 20% in the API and Playground during the offer.",
+     "content_html": "<h2>FLUX.3 Image launch offer: 20% off</h2><p>FLUX.3 Image generates images from text and edits with 1–10 reference images, with five output levels from 768 to 4K. It suits product displays, interior proposals and creative visuals.</p><p>Runs from October 15, 2026 at 19:00 to October 22, 2026 at 19:00 (UTC+8). Automatically applied to all users in the API and Playground across every resolution level. No coupon needed. Cannot be combined with other model pricing offers.</p>"
+    },
+    "zh": {
+     "title": "FLUX.3 Image 上新限时 8 折",
+     "summary": "文字构想与参考图编辑都能做，768 到 4K 共五档画质。活动期间全体用户通过 API 与 Playground 自动享受 8 折。",
+     "content_html": "<h2>FLUX.3 Image，上新限时 8 折</h2><p>FLUX.3 Image 支持文字生成图片，也支持上传 1–10 张参考图进行编辑，提供 768、1K、1.5K、2K、4K 五档输出，适合商品陈列、空间提案与视觉创作。</p><p>活动时间：2026 年 10 月 15 日 19:00 至 10 月 22 日 19:00（北京时间）。全体用户自动享受 8 折，API 与 Playground 均可参与，覆盖全部分辨率档位，无需优惠码，不与其他模型价格优惠叠加。</p>"
+    }
+   },
+   "cta": {
+    "href": "/models/flux-3-image",
+    "label": {
+     "en": "Create now",
+     "zh": "立即创作"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "flux-3-image": {
+      "image": "https://static.hiapi.ai/model-onboarding/flux-muse-20261014/e3105505cae2969d-flux-1.5K-0.webp",
+      "title": {
+       "en": "FLUX.3 Image",
+       "zh": "FLUX.3 Image"
+      },
+      "summary": {
+       "en": "Text-to-image and editing with 1–10 references. Save 20% from 768 to 4K.",
+       "zh": "文字生图与 1–10 张参考图编辑，768 到 4K 均享 8 折。"
+      }
+     }
+    },
+    "copy": {
+     "eyebrow": {
+      "en": "NEW MODEL LAUNCH",
+      "zh": "新模型上新"
+     },
+     "title": {
+      "en": "FLUX.3 Image\n20% off at launch",
+      "zh": "FLUX.3 Image\n上新 8 折"
+     },
+     "description": {
+      "en": "FLUX.3 Image is live. All users save 20% automatically during the offer.",
+      "zh": "FLUX.3 Image 现已上线，活动期间全体用户自动享受 8 折。"
+     }
+    }
+   }
+  },
+  {
+   "slug": "gpt-image-2-5-family-launch-7-fold",
+   "start_at": 1788924341,
+   "end_at": 1790133941,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "gpt-image-2.5-flare",
+     "gpt-image-2.5-sunburst",
+     "gpt-image-2.5-flare@pro",
+     "gpt-image-2.5-sunburst@pro",
+     "gpt-image-2.5-flare/image-to-image",
+     "gpt-image-2.5-flare/text-to-image",
+     "gpt-image-2.5-sunburst/image-to-image",
+     "gpt-image-2.5-sunburst/text-to-image"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 7000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 4,
+   "i18n": {
+    "en": {
+     "title": "GPT Image 2.5 launch offer: 30% off",
+     "summary": "Flare and Sunburst are now available with automatic 30% off in the API and Playground.",
+     "content_html": "<h2>GPT Image 2.5 dual-model launch</h2><p>Flare supports fast generation and flexible edits, while Sunburst focuses on detailed generation and high-fidelity editing.</p><p><strong>30% off for a limited time.</strong> The promotional price is applied automatically for all users in the API and Playground.</p><p>Offer period: 2026-09-09 11:25–2026-09-23 11:25 (China Standard Time)</p>"
+    },
+    "zh": {
+     "title": "GPT Image 2.5 双模型上新限时 7 折",
+     "summary": "Flare 与 Sunburst 现已开放，活动期间 API 与 Playground 自动享受 7 折。",
+     "content_html": "<h2>GPT Image 2.5 双模型上新</h2><p>Flare 适合快速生成与灵活编辑；Sunburst 适合精细生成与高保真编辑。</p><p><strong>限时 7 折</strong>，所有用户通过 API 或 Playground 调用均自动享受活动价格。</p><p>活动时间：2026-09-09 11:25–2026-09-23 11:25（北京时间）</p>"
+    }
+   },
+   "cta": {
+    "href": "/promotions/gpt-image-2-5-family-launch-7-fold",
+    "label": {
+     "en": "Create now",
+     "zh": "立即创作"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "gpt-image-2.5-flare": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/1e7b2812d059ee7c.webp",
+      "title": {
+       "en": "Fast generation and flexible edits",
+       "zh": "快速生成与灵活编辑"
+      },
+      "summary": {
+       "en": "For everyday high-quality images, reference edits, and flexible aspect ratios.",
+       "zh": "适合日常高质量图片、参考图编辑和多种画幅。"
+      }
+     },
+     "gpt-image-2.5-flare/image-to-image": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/1e7b2812d059ee7c.webp",
+      "title": {
+       "en": "Fast generation and flexible edits",
+       "zh": "快速生成与灵活编辑"
+      },
+      "summary": {
+       "en": "For everyday high-quality images, reference edits, and flexible aspect ratios.",
+       "zh": "适合日常高质量图片、参考图编辑和多种画幅。"
+      }
+     },
+     "gpt-image-2.5-flare/text-to-image": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/1e7b2812d059ee7c.webp",
+      "title": {
+       "en": "Fast generation and flexible edits",
+       "zh": "快速生成与灵活编辑"
+      },
+      "summary": {
+       "en": "For everyday high-quality images, reference edits, and flexible aspect ratios.",
+       "zh": "适合日常高质量图片、参考图编辑和多种画幅。"
+      }
+     },
+     "gpt-image-2.5-flare@pro": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/1e7b2812d059ee7c.webp",
+      "title": {
+       "en": "Fast generation and flexible edits",
+       "zh": "快速生成与灵活编辑"
+      },
+      "summary": {
+       "en": "For everyday high-quality images, reference edits, and flexible aspect ratios.",
+       "zh": "适合日常高质量图片、参考图编辑和多种画幅。"
+      }
+     },
+     "gpt-image-2.5-sunburst": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/c18d65e22705c77f.webp",
+      "title": {
+       "en": "Detailed generation and high-fidelity edits",
+       "zh": "精细生成与高保真编辑"
+      },
+      "summary": {
+       "en": "For intricate details, precise local changes, and composition preservation.",
+       "zh": "适合复杂细节、局部修改和构图保持。"
+      }
+     },
+     "gpt-image-2.5-sunburst/image-to-image": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/c18d65e22705c77f.webp",
+      "title": {
+       "en": "Detailed generation and high-fidelity edits",
+       "zh": "精细生成与高保真编辑"
+      },
+      "summary": {
+       "en": "For intricate details, precise local changes, and composition preservation.",
+       "zh": "适合复杂细节、局部修改和构图保持。"
+      }
+     },
+     "gpt-image-2.5-sunburst/text-to-image": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/c18d65e22705c77f.webp",
+      "title": {
+       "en": "Detailed generation and high-fidelity edits",
+       "zh": "精细生成与高保真编辑"
+      },
+      "summary": {
+       "en": "For intricate details, precise local changes, and composition preservation.",
+       "zh": "适合复杂细节、局部修改和构图保持。"
+      }
+     },
+     "gpt-image-2.5-sunburst@pro": {
+      "image": "https://static.hiapi.ai/gallery/2026/09/c18d65e22705c77f.webp",
+      "title": {
+       "en": "Detailed generation and high-fidelity edits",
+       "zh": "精细生成与高保真编辑"
+      },
+      "summary": {
+       "en": "For intricate details, precise local changes, and composition preservation.",
+       "zh": "适合复杂细节、局部修改和构图保持。"
+      }
+     }
+    }
+   }
+  },
+  {
+   "slug": "happyhorse-launch",
+   "start_at": 1778241600,
+   "end_at": 1778846400,
+   "paused": false,
+   "activity_type": "content",
+   "execution_mode": "config_only",
+   "rule_config": {},
+   "placements": [
+    "activity_page",
+    "announcement_bar"
+   ],
+   "active_version": 1,
+   "i18n": {
+    "en": {
+     "title": "HappyHorse 1.0 Launch · 25% Credits Back",
+     "summary": "Spend on HappyHorse 1.0 during the launch window and earn 25% back as credits — capped at $100 per user, usable on every model.",
+     "content_html": "<h2>Promotion Rules</h2><ul><li>During the promotion, get <strong>25% credits back</strong> on net spend with the <strong>HappyHorse 1.0</strong> model</li><li>Cap of <strong>$100</strong> per user</li><li>Rebated credits work across <strong>all models</strong> and never expire</li><li>Rebated credits <strong>do not trigger referral commission</strong> (no 5% recharge commission for inviters on this amount)</li><li>Net spend = charges − refunds (HappyHorse 1.0 only)</li><li>Window: Beijing time 2026-05-08 20:00 → 2026-05-15 20:00</li><li>Settlement: batch payout on May 16</li></ul><h2>How to Join</h2><ol><li>Sign in to your hiapi account</li><li>Top up and call the <code>happyhorse-1-0</code> model</li><li>Spend tracks automatically; rebate lands May 16 — no signup required</li></ol><h2>FAQ</h2><p><strong>Do I need to opt in?</strong> No — any qualifying spend during the window counts.</p><p><strong>Can I keep the rebated credits?</strong> Yes, they're permanent and work across every model.</p><p><strong>How are refunds handled?</strong> We rebate on net spend (charges minus refunds), so refunds reduce the rebate proportionally.</p><p><strong>When do credits arrive?</strong> Within May 16 (Beijing time), as a single payout per user.</p>"
+    },
+    "zh": {
+     "title": "HappyHorse 1.0 上线 · 消费返 25%",
+     "summary": "活动期内使用 HappyHorse 1.0 模型，按净消费 25% 返额度，单用户上限 $100，返出的额度全模型可用。",
+     "content_html": "<h2>活动规则</h2><ul><li>活动期间使用 <strong>HappyHorse 1.0</strong> 模型，按净消费的 <strong>25%</strong> 返额度</li><li>每位用户返额上限 <strong>$100</strong></li><li>返出的额度 <strong>全模型通用</strong>，永久有效</li><li>返出的额度 <strong>不参与邀请返佣</strong>（不计入邀请人的 5% 充值返佣）</li><li>净消费 = 实际扣费 − 退款（仅 HappyHorse 1.0）</li><li>活动期：北京时间 2026-05-08 20:00 — 2026-05-15 20:00</li><li>结算时间：5 月 16 日批量发放至账户额度</li></ul><h2>怎么参与</h2><ol><li>登录 hiapi 账号</li><li>充值后调用 <code>happyhorse-1-0</code> 模型生成视频</li><li>消费金额自动累计，5 月 16 日完成发放，无需报名</li></ol><h2>常见问题</h2><p><strong>需要报名吗？</strong> 不需要，活动期内调用 HappyHorse 1.0 即自动参与。</p><p><strong>返出的额度有限制吗？</strong> 永久有效，调用任意模型均可使用。</p><p><strong>退款怎么算？</strong> 按净消费计算（已扣费 − 退款），不会因退款重复返额。</p><p><strong>什么时候到账？</strong> 活动结束后次日（5/16）批量发放，单次记录入账。</p>"
+    }
+   },
+   "cta": {
+    "href": "/models/happyhorse-1-0",
+    "label": {
+     "en": "Try HappyHorse 1.0 now",
+     "zh": "立即体验 HappyHorse 1.0"
+    }
+   }
+  },
+  {
+   "slug": "lyria-3-5-launch-8-fold",
+   "start_at": 1789361296,
+   "end_at": 1789963200,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "lyria-3.5"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 2,
+   "i18n": {
+    "en": {
+     "title": "Lyria 3.5 launch offer: 20% off",
+     "summary": "Generate complete music from text, style, or lyrics. API and Playground requests receive 20% off automatically.",
+     "content_html": "<h2>Save 20% on Lyria 3.5 music generation</h2><p>Turn a music description, genre, mood, or lyrics into a complete track with melody, vocals, and arrangement. Optional controls include title, BPM, and target duration.</p><p><strong>Pay 80% of the standard price during the offer.</strong> The discount applies automatically to all users in both the API and Playground, with no coupon required.</p><p>Offer period: September 14, 2026 at 12:48–September 21, 2026 at 12:00 (China Standard Time).</p>"
+    },
+    "zh": {
+     "title": "Lyria 3.5 上新限时 8 折",
+     "summary": "用文字、曲风或歌词生成完整音乐。活动期间，API 与 Playground 自动享受 8 折。",
+     "content_html": "<h2>Lyria 3.5 音乐生成限时 8 折</h2><p>输入音乐描述、曲风、情绪或歌词，生成包含旋律、人声与编曲的完整音乐，可设置标题、BPM 与目标时长。</p><p><strong>活动期间按标准价格的 80% 计费</strong>，全体用户通过 API 或 Playground 调用均自动享受优惠，无需领券。</p><p>活动时间：2026-09-14 12:48–2026-09-21 12:00（北京时间）。</p>"
+    }
+   },
+   "cta": {
+    "href": "/models/lyria-3.5",
+    "label": {
+     "en": "Create music now",
+     "zh": "立即创作音乐"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "lyria-3.5": {
+      "title": {
+       "en": "Turn a music idea into a complete track",
+       "zh": "把音乐想法变成完整歌曲"
+      },
+      "summary": {
+       "en": "Generate melody, vocals, and arrangement from style, mood, or lyrics.",
+       "zh": "从曲风、情绪或歌词出发，生成旋律、人声与编曲。"
+      }
+     }
+    }
+   }
+  },
+  {
+   "slug": "heygen-avatar-v-launch-8-fold",
+   "start_at": 1788140936,
+   "end_at": 1788796799,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "heygen-avatar-v"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 2,
+   "i18n": {
+    "en": {
+     "title": "HeyGen Avatar V model launch | 20% off",
+     "summary": "HeyGen Avatar V is now available on HiAPI. All users receive 20% off automatically across the API and Playground during the launch offer.",
+     "content_html": "<h2>Bring avatar video into one unified API workflow</h2><p>During the launch offer, HeyGen Avatar V is billed at 80% of its standard price. No coupon is required; the discount applies automatically in both the API and Playground.</p><h2>Drive an avatar with a script or audio</h2><ul><li><strong>Script and voice:</strong> Choose an avatar and voice, then generate a lip-synced presenter video from text.</li><li><strong>Driving audio:</strong> Upload or provide audio to synchronize the avatar directly.</li><li><strong>Video output:</strong> Use MP4/WebM, backgrounds, transparent video, and optional SRT captions.</li></ul><h2>Made for</h2><ul><li>Product explainers, training, and internal communications.</li><li>Social video, marketing content, and multilingual production.</li><li>Series that need a consistent digital presenter.</li></ul><h2>How to join</h2><ol><li>Open the HeyGen Avatar V model page.</li><li>Choose script-and-voice or driving audio, then configure the frame.</li><li>Submit during the offer period to receive 20% off automatically.</li></ol><h2>Offer details</h2><ul><li>Available to all registered users. No coupon is required.</li><li>Eligible model: <code>heygen-avatar-v</code>.</li><li>This offer cannot be combined with another model pricing promotion.</li><li>The offer ends on September 7, 2026 at 23:59:59 China Standard Time.</li></ul>"
+    },
+    "zh": {
+     "title": "HeyGen Avatar V 模型上新｜限时 8 折",
+     "summary": "HeyGen Avatar V 现已登陆 HiAPI。活动期间，全体用户通过 API 和 Playground 使用均可享受 8 折优惠。",
+     "content_html": "<h2>让数字人视频进入统一 API 工作流</h2><p>活动期间，HeyGen Avatar V 按标准价格的 80% 计费。无需领券，API 与 Playground 自动生效。</p><h2>用台词或音频驱动数字人</h2><ul><li><strong>台词配音：</strong>选择数字人形象和声音，输入台词生成口型同步视频。</li><li><strong>音频驱动：</strong>上传或提供驱动音频，直接同步数字人口型。</li><li><strong>视频输出：</strong>支持 MP4/WebM、背景设置、透明视频和可选 SRT 字幕。</li></ul><h2>适合这些内容</h2><ul><li>产品讲解、课程培训与企业内部沟通。</li><li>社交媒体口播、营销素材与多语言内容。</li><li>需要固定数字人持续出镜的系列视频。</li></ul><h2>如何参与</h2><ol><li>进入 HeyGen Avatar V 模型页。</li><li>选择台词配音或音频驱动，并完成画面设置。</li><li>在活动期内提交任务，系统自动按 8 折结算。</li></ol><h2>活动规则</h2><ul><li>适用于全部注册用户，无需领取优惠券。</li><li>活动模型为 <code>heygen-avatar-v</code>。</li><li>本优惠不与其他模型价格活动叠加。</li><li>活动截止时间为 2026 年 9 月 7 日 23:59:59（北京时间）。</li></ul>"
+    }
+   },
+   "cta": {
+    "href": "/models/heygen-avatar-v",
+    "label": {
+     "en": "Try HeyGen Avatar V",
+     "zh": "立即体验 HeyGen Avatar V"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "heygen-avatar-v": {
+      "image": "https://static.hiapi.ai/model-covers/heygen-avatar-v/2026/08/30/1788076737058-50acfd45e11e893d-heygen-avatar-v-showcase-cover.webp",
+      "title": {
+       "en": "Create avatar video from a script or audio",
+       "zh": "台词或音频，直接生成数字人视频"
+      },
+      "summary": {
+       "en": "Choose a preset avatar and voice, with backgrounds, transparent WebM, and optional SRT captions.",
+       "zh": "选择预置数字人和声音，支持背景、透明 WebM 与可选 SRT 字幕。"
+      }
+     }
+    }
+   }
+  },
+  {
+   "slug": "wan3-0-launch-8-fold",
+   "start_at": 1787803200,
+   "end_at": 1788408000,
+   "paused": false,
+   "activity_type": "model_promotion",
+   "execution_mode": "live",
+   "rule_config": {
+    "model_ids": [
+     "wan3.0-video"
+    ],
+    "benefit": {
+     "type": "percentage_discount",
+     "price_multiplier_bps": 8000
+    },
+    "audience": {
+     "mode": "all"
+    }
+   },
+   "placements": [
+    "activity_page",
+    "popup",
+    "announcement_bar",
+    "model_card",
+    "model_detail",
+    "playground"
+   ],
+   "active_version": 3,
+   "i18n": {
+    "en": {
+     "title": "Wan 3.0 model launch | 20% off",
+     "summary": "Wan 3.0 is now available on hiAPI. All users receive 20% off automatically across the API and Playground during the launch offer.",
+     "content_html": "<h2>Bring every reference into one video workflow</h2><p>During the launch offer, Wan 3.0 is billed at 80% of its standard price. No coupon is required; the discount applies automatically in both the API and Playground.</p><h2>Give one request the full creative context</h2><ul><li><strong>Text and first/last frames:</strong> Start from a prompt or define the opening and closing visuals to guide the shot.</li><li><strong>Multiple reference sources:</strong> Use images, video, audio, files, or webpage content to preserve subjects, style, and narrative cues.</li><li><strong>Resolution and sound:</strong> Create at 480P, 720P, or 1080P and optionally include synchronized audio.</li></ul><h2>Made for</h2><ul><li>Turning product, character, or scene references into a coherent short video.</li><li>Extending webpages, planning files, or existing footage into a new visual story.</li><li>Testing camera and sound directions for brand content, social media, and creative pitches.</li></ul><h2>How to join</h2><ol><li>Open the Wan 3.0 model page.</li><li>Describe the video and add keyframes or reference sources when needed.</li><li>Choose the output resolution and audio option, then submit during the offer period to receive 20% off automatically.</li></ol><h2>Offer details</h2><ul><li>Available to all registered users. No coupon is required.</li><li>Eligible model: <code>wan3.0-video</code>.</li><li>This offer cannot be combined with another model pricing promotion.</li><li>The offer ends on September 3, 2026 at 12:00 China Standard Time.</li></ul>"
+    },
+    "zh": {
+     "title": "Wan 3.0 模型上新｜限时 8 折",
+     "summary": "Wan 3.0 现已登陆 hiAPI。活动期间，全体用户通过 API 和 Playground 使用均可享受 8 折优惠。",
+     "content_html": "<h2>把分散的参考素材，收进一条视频工作流</h2><p>活动期间，Wan 3.0 按标准价格的 80% 计费。无需领券，API 与 Playground 自动生效。</p><h2>一次提交，带上完整创作上下文</h2><ul><li><strong>文本与首尾帧：</strong>从提示词开始创作，也可以指定起始画面和结束画面，让镜头方向更明确。</li><li><strong>多种参考素材：</strong>图片、视频、音频、文件或网页内容都能成为创作参考，适合保持主体、风格与叙事线索。</li><li><strong>画质与声音：</strong>支持 480P、720P、1080P 输出，并可按需生成同步音频。</li></ul><h2>适合这些创作</h2><ul><li>用多张产品图、人物图或场景图组织一支连贯短片。</li><li>把网页、方案文件或已有视频素材延展成新的视觉叙事。</li><li>为品牌内容、社交媒体和创意提案快速验证镜头与声音方向。</li></ul><h2>如何参与</h2><ol><li>进入 Wan 3.0 模型页。</li><li>输入创作描述，并按需加入首尾帧或参考素材。</li><li>选择输出分辨率和声音设置，在活动期内提交任务，系统自动按 8 折结算。</li></ol><h2>活动规则</h2><ul><li>适用于全部注册用户，无需领取优惠券。</li><li>活动模型为 <code>wan3.0-video</code>。</li><li>本优惠不与其他模型价格活动叠加。</li><li>活动截止时间为 2026 年 9 月 3 日 12:00（北京时间）。</li></ul>"
+    }
+   },
+   "cta": {
+    "href": "/models/wan3.0-video",
+    "label": {
+     "en": "Try Wan 3.0",
+     "zh": "立即体验 Wan 3.0"
+    }
+   },
+   "popup_media": {
+    "models": {
+     "wan3.0-video": {
+      "title": {
+       "en": "Create videos with Wan 3.0",
+       "zh": "开始使用 Wan 3.0 创作视频"
+      },
+      "summary": {
+       "en": "Try it through the API or Playground. The launch price is applied automatically.",
+       "zh": "现在即可通过 API 或 Playground 体验，活动价格自动生效。"
+      }
+     }
+    }
+   }
+  }
+ ]
+}

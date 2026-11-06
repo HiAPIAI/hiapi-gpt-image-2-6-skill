@@ -1,0 +1,8 @@
+interface:
+  display_name: "HiAPI GPT Image 2.6"
+  short_description: "Generate or edit one image with GPT Image 2.6, including SVG and GIF"
+  brand_color: "#F97316"
+  default_prompt: "Use $hiapi-gpt-image-2-6 for GPT Image 2.6 only. Omit --model so the CLI picks text-to-image or image-to-image (Flare by default, --family sunburst when asked), add --svg or --gif for vector and animation output, preflight with --dry-run --estimate (optionally --max-cost), submit once with an idempotency key, then resume and quality-check the output."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+# HiAPI GPT Image 2.6 Agent Skill
+
+HiAPI Agent Skill for GPT Image 2.6 Flare and Sunburst — `gpt-image-2.6-flare/text-to-image`,
+`gpt-image-2.6-flare/image-to-image`, `gpt-image-2.6-sunburst/text-to-image`,
+`gpt-image-2.6-sunburst/image-to-image` — covering text-to-image, image-to-image,
+SVG and GIF output, mask/markup edits, local-file uploads, preflight estimates,
+`--max-cost` limits, idempotent async tasks, recovery, output download, and
+signed auto-updates.
+
+Install: `npx -y github:HiAPIAI/hiapi-gpt-image-2-6-skill -y`
+
+- [README](README.md): installation, highlights, five worked examples, FAQ
+- [Skill instructions](SKILL.md): invocation boundary, command table, required order
+- [API contract](references/api.md): fields, limits, cross-field rules, pricing logic
+- [Output and recovery](references/output.md): format detection, resume, quality checks
+- [Workflow](references/workflow.md): brief to delivery
+- [Local files](references/local-files.md): upload and mask rules
+- [Upgrade policy](references/upgrade-policy.md): signed auto-update
+- [Migration](MIGRATION.md): GPT Image 2.5 to 2.6
+- [Pricing](https://hiapi.ai/en/pricing)
