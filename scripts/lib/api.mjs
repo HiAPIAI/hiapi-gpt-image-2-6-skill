@@ -100,7 +100,7 @@ export function taskErrorMessage(status, body) {
   }
   return new SkillError(`HiAPI request failed with HTTP ${status}: ${summary}`, {
     code: code || "HTTP_ERROR",
-    next: "Retry once; if it persists, run with --dry-run --estimate and check https://hiapi.ai/docs/?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6.",
+    next: "Retry once; if it persists, run with --dry-run --estimate and check https://hiapi.ai/docs/.",
   });
 }
 

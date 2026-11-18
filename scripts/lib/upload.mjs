@@ -132,9 +132,9 @@ async function postUpload(config, inspected, fetchImpl = fetch) {
     const message = String(body?.message || body?.error?.message || body || `HTTP ${response.status}`);
     const next =
       response.status === 401 || response.status === 403
-        ? "Check HIAPI_API_KEY at https://console.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6."
+        ? "Check HIAPI_API_KEY at https://console.hiapi.ai/en/dashboard/api-keys."
         : response.status === 402
-          ? "Check the account balance at https://console.hiapi.ai/en/dashboard?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6."
+          ? "Check the account balance at https://console.hiapi.ai/en/dashboard."
           : response.status === 429
             ? "Upload rate limit or daily quota reached; wait and retry, or host the image yourself and pass --image-url."
             : "Re-export the image and retry, or host it yourself and pass --image-url <https URL>.";

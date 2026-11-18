@@ -33,10 +33,10 @@ export const LEGACY_2_5_MODELS = Object.freeze({
 
 export const DEFAULT_BASE_URL = "https://api.hiapi.ai";
 export const DEFAULT_SITE_URL = "https://api.hiapi.ai";
-export const HIAPI_API_KEYS_URL = "https://console.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6";
-export const HIAPI_DASHBOARD_URL = "https://console.hiapi.ai/en/dashboard?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6";
-export const HIAPI_PRICING_URL = "https://hiapi.ai/en/pricing?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6";
-export const HIAPI_DOCS_URL = "https://hiapi.ai/docs/?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-gpt-image-2-6";
+export const HIAPI_API_KEYS_URL = "https://console.hiapi.ai/en/dashboard/api-keys";
+export const HIAPI_DASHBOARD_URL = "https://console.hiapi.ai/en/dashboard";
+export const HIAPI_PRICING_URL = "https://hiapi.ai/en/pricing";
+export const HIAPI_DOCS_URL = "https://hiapi.ai/docs/";
 export const MODEL_PAGE_URL_PREFIX = "https://hiapi.ai/en/models/";
 export const MODEL_PAGE_URL_PREFIX_ZH = "https://hiapi.ai/zh/models/";
 
