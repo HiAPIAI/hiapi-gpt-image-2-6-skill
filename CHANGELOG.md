@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-11-19
+
+- hiapi.ai links in `README.md`, `README.zh-CN.md`, `llms.txt` and the installer's
+  closing message carry `utm_source` / `utm_medium` / `utm_campaign` parameters.
+  No CLI, payload or pricing changes; existing 1.0.0 installs pick this up through
+  the signed automatic update.
+
 ## 1.0.0 — 2026-11-06
 
 - First release of the GPT Image 2.6 skill for `gpt-image-2.6-flare/text-to-image`,

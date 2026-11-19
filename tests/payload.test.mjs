@@ -85,7 +85,7 @@ function validateAgainstSchema(payload) {
 }
 
 test("version and schema snapshot agree that fixtures are current", () => {
-  assert.equal(SKILL_VERSION, "1.0.0");
+  assert.equal(SKILL_VERSION, "1.0.1");
   assert.equal(Object.keys(schemas).length, 4);
   assert.equal(pricingFixture.rows.length, 4);
   assert.match(fixtures._capturedAt, /^\d{4}-\d{2}-\d{2}$/);
