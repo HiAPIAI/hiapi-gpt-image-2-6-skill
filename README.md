@@ -9,7 +9,7 @@ images, `gpt-image-2.6-flare/image-to-image` with them — and `--family sunburs
 switches to the Sunburst pair. Every 2.6 model takes `--quality` directly, so
 there is no separate pro route to remember.
 
-[中文](README.zh-CN.md) · [English](README.md) · [Flare text-to-image](https://hiapi.ai/en/models/gpt-image-2.6-flare-text-to-image) · [Flare image-to-image](https://hiapi.ai/en/models/gpt-image-2.6-flare-image-to-image) · [Sunburst text-to-image](https://hiapi.ai/en/models/gpt-image-2.6-sunburst-text-to-image) · [Sunburst image-to-image](https://hiapi.ai/en/models/gpt-image-2.6-sunburst-image-to-image) · [API keys](https://console.hiapi.ai/en/dashboard/api-keys) · [Pricing](https://hiapi.ai/en/pricing) · [Docs](https://hiapi.ai/docs/)
+[中文](README.zh-CN.md) · [English](README.md) · [Flare text-to-image](https://hiapi.ai/en/models/gpt-image-2.6-flare-text-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Flare image-to-image](https://hiapi.ai/en/models/gpt-image-2.6-flare-image-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Sunburst text-to-image](https://hiapi.ai/en/models/gpt-image-2.6-sunburst-text-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Sunburst image-to-image](https://hiapi.ai/en/models/gpt-image-2.6-sunburst-image-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [API keys](https://console.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Pricing](https://hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Docs](https://hiapi.ai/docs/?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6)
 
 ## Highlights
 
@@ -128,7 +128,7 @@ the estimate could not be computed, because a limit you cannot verify is not a
 limit. Without `--max-cost`, an estimate failure is only reported.
 
 Prices move. `low` at `1K` starts at `$0.023` per output image today; treat it as
-a snapshot and confirm with `--estimate` and the [pricing page](https://hiapi.ai/en/pricing).
+a snapshot and confirm with `--estimate` and the [pricing page](https://hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6).
 
 ## Automatic updates
 

@@ -8,7 +8,7 @@
 `gpt-image-2.6-flare/image-to-image`；`--family sunburst` 切到 Sunburst 一系。
 2.6 每个模型都直接接受 `--quality`，不再需要记 pro 路由。
 
-[中文](README.zh-CN.md) · [English](README.md) · [Flare 文生图](https://hiapi.ai/zh/models/gpt-image-2.6-flare-text-to-image) · [Flare 图生图](https://hiapi.ai/zh/models/gpt-image-2.6-flare-image-to-image) · [Sunburst 文生图](https://hiapi.ai/zh/models/gpt-image-2.6-sunburst-text-to-image) · [Sunburst 图生图](https://hiapi.ai/zh/models/gpt-image-2.6-sunburst-image-to-image) · [API Key](https://console.hiapi.ai/en/dashboard/api-keys) · [价格](https://hiapi.ai/en/pricing) · [文档](https://hiapi.ai/docs/)
+[中文](README.zh-CN.md) · [English](README.md) · [Flare 文生图](https://hiapi.ai/zh/models/gpt-image-2.6-flare-text-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Flare 图生图](https://hiapi.ai/zh/models/gpt-image-2.6-flare-image-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Sunburst 文生图](https://hiapi.ai/zh/models/gpt-image-2.6-sunburst-text-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [Sunburst 图生图](https://hiapi.ai/zh/models/gpt-image-2.6-sunburst-image-to-image?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [API Key](https://console.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [价格](https://hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) · [文档](https://hiapi.ai/docs/?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6)
 
 ## 亮点
 
@@ -121,7 +121,7 @@ node scripts/hiapi-gpt-image-2-6.mjs --resume-task-id tk-hiapi-...
 不叫上限。不设 `--max-cost` 时，估价失败只做提示。
 
 价格会变。今天 `1K`、`low` 起价 `$0.023` 一张，请当作快照，以 `--estimate` 和
-[定价页](https://hiapi.ai/en/pricing) 为准。
+[定价页](https://hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6) 为准。
 
 ## 自动更新
 

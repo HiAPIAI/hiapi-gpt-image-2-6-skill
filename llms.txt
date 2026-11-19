@@ -17,4 +17,4 @@ Install: `npx -y github:HiAPIAI/hiapi-gpt-image-2-6-skill -y`
 - [Local files](references/local-files.md): upload and mask rules
 - [Upgrade policy](references/upgrade-policy.md): signed auto-update
 - [Migration](MIGRATION.md): GPT Image 2.5 to 2.6
-- [Pricing](https://hiapi.ai/en/pricing)
+- [Pricing](https://hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-gpt-image-2-6)
