@@ -147,7 +147,7 @@ const keySet = Boolean(String(process.env.HIAPI_API_KEY || "").trim());
 process.stdout.write(
   keySet
     ? `[${DISPLAY_NAME}] HIAPI_API_KEY is set.\n`
-    : `[${DISPLAY_NAME}] HIAPI_API_KEY is not set yet. Create one at https://console.hiapi.ai/en/dashboard/api-keys, then export HIAPI_API_KEY="..."\n`,
+    : `[${DISPLAY_NAME}] HIAPI_API_KEY is not set yet. Create one at https://console.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=install&utm_campaign=hiapi-gpt-image-2-6, then export HIAPI_API_KEY="..."\n`,
 );
 const autoUpdateOff = ["off", "0", "false", "no", "disabled"].includes(
   String(process.env.HIAPI_SKILL_AUTO_UPDATE || "").trim().toLowerCase(),
