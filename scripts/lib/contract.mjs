@@ -3,7 +3,7 @@
 // contract check compares them and fails loudly when they drift.
 
 export const SKILL_ID = "hiapi-gpt-image-2-6";
-export const SKILL_VERSION = "1.0.1";
+export const SKILL_VERSION = "1.0.2";
 
 export const FAMILIES = Object.freeze({
   flare: "gpt-image-2.6-flare",
@@ -70,6 +70,11 @@ export const DEFAULT_RESOLUTION = "1K";
 export const DEFAULT_ASPECT_RATIO = "auto";
 export const DEFAULT_OUTPUT_FORMAT = "png";
 export const DEFAULT_FRAME_SIZE = "512x512";
+// GIF frame defaults applied upstream when the fields are omitted. The public
+// schema states them only in the field descriptions ("Omitted uses 9" /
+// "Omitted uses 200"): the `default` keys were removed on 2026-11-11 so that
+// clients filling schema defaults do not send GIF-only fields with png output.
+// Used locally for sheet-size estimates only; never sent unless the user asks.
 export const DEFAULT_FRAME_COUNT = 9;
 export const DEFAULT_FRAME_DURATION_MS = 200;
 export const FRAME_COUNT_MIN = 2;
@@ -132,8 +137,8 @@ export const SCHEMA_CONTRACT = Object.freeze({
     required: ["prompt", "model"],
     output_format: { enum: TEXT_OUTPUT_FORMATS, default: DEFAULT_OUTPUT_FORMAT },
     frame_size: { pattern: "^(auto|[0-9]+x[0-9]+)$" },
-    frame_count: { type: "integer", minimum: FRAME_COUNT_MIN, maximum: FRAME_COUNT_MAX, default: DEFAULT_FRAME_COUNT },
-    frame_duration_ms: { type: "integer", minimum: FRAME_DURATION_MIN, default: DEFAULT_FRAME_DURATION_MS },
+    frame_count: { type: "integer", minimum: FRAME_COUNT_MIN, maximum: FRAME_COUNT_MAX },
+    frame_duration_ms: { type: "integer", minimum: FRAME_DURATION_MIN },
   },
   image_to_image: {
     properties: [

@@ -1,6 +1,6 @@
 {
   "name": "hiapi-gpt-image-2-6-skill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "HiAPI GPT Image 2.6 Agent Skill for Flare and Sunburst image generation and editing, including SVG and GIF output",
   "homepage": "https://github.com/HiAPIAI/hiapi-gpt-image-2-6-skill#readme",
   "repository": { "type": "git", "url": "https://github.com/HiAPIAI/hiapi-gpt-image-2-6-skill.git" },
