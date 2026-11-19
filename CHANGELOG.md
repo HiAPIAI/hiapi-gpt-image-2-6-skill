@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.2 — 2026-11-19
+
+- `--check-contract` and the live contract check pass again. The public schema
+  dropped the `default` keys of the GIF-only `frame_count` and `frame_duration_ms`
+  fields on 2026-11-11; the check now expects no default there and instead verifies
+  that the field descriptions still say "Omitted uses 9." / "Omitted uses 200.",
+  the values the CLI uses for its local sheet-size estimate.
+- No generation, payload or pricing changes: the CLI still sends frame fields only
+  when you pass them.
+
 ## 1.0.1 — 2026-11-19
 
 - hiapi.ai links in `README.md`, `README.zh-CN.md`, `llms.txt` and the installer's

@@ -3,7 +3,7 @@
   "family": "gpt-image-2.6",
   "skillId": "hiapi-gpt-image-2-6",
   "skillName": "HiAPI GPT Image 2.6",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "status": "release",
   "publicRepo": "HiAPIAI/hiapi-gpt-image-2-6-skill",
   "modelIds": [

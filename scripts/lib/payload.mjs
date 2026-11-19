@@ -10,6 +10,7 @@ import {
   BACKGROUNDS,
   COMPLEXITIES,
   DEFAULT_ASPECT_RATIO,
+  DEFAULT_FRAME_COUNT,
   DEFAULT_FRAME_SIZE,
   DEFAULT_OUTPUT_FORMAT,
   DEFAULT_QUALITY,
@@ -533,7 +534,7 @@ export function buildPayload(options = {}) {
     input.frame_size = frameSize;
     if (frameCount != null) input.frame_count = frameCount;
     if (frameDurationMs != null) input.frame_duration_ms = frameDurationMs;
-    const sheet = estimateGifSheet(frameSize, frameCount ?? SCHEMA_CONTRACT.text_to_image.frame_count.default);
+    const sheet = estimateGifSheet(frameSize, frameCount ?? DEFAULT_FRAME_COUNT);
     if (sheet?.warnings.length) {
       warnings.push(
         `GIF contact sheet may be rejected: ${sheet.warnings.join("; ")}. The service refuses an oversized sheet at submission without charging.`,
@@ -541,7 +542,7 @@ export function buildPayload(options = {}) {
     }
     if (sheet) {
       const edge = Math.max(sheet.frameWidth, sheet.frameHeight);
-      if (edge >= 768 && (frameCount ?? SCHEMA_CONTRACT.text_to_image.frame_count.default) > GIF_768_MAX_FRAMES) {
+      if (edge >= 768 && (frameCount ?? DEFAULT_FRAME_COUNT) > GIF_768_MAX_FRAMES) {
         warnings.push(`${edge}px frames support at most ${GIF_768_MAX_FRAMES} frames.`);
       }
     }

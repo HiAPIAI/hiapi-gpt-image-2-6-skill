@@ -7,6 +7,8 @@ import {
   ALL_OF_CONSTRAINTS,
   DEFAULT_BASE_URL,
   DEFAULT_DOWNLOAD_TIMEOUT_MS,
+  DEFAULT_FRAME_COUNT,
+  DEFAULT_FRAME_DURATION_MS,
   DEFAULT_SITE_URL,
   DEFAULT_TIMEOUT_MINUTES,
   HIAPI_API_KEYS_URL,
@@ -472,9 +474,17 @@ export async function checkLiveContract(options = {}) {
     if (mode === TEXT_TO_IMAGE) {
       cmp("frame_count", "minimum", SCHEMA_CONTRACT.text_to_image.frame_count.minimum);
       cmp("frame_count", "maximum", SCHEMA_CONTRACT.text_to_image.frame_count.maximum);
-      cmp("frame_count", "default", SCHEMA_CONTRACT.text_to_image.frame_count.default);
+      // No schema default on purpose (removed 2026-11-11); the local estimate
+      // constants are checked against the descriptions instead.
+      cmp("frame_count", "default", undefined);
+      if (!String(props.frame_count?.description || "").includes(`Omitted uses ${DEFAULT_FRAME_COUNT}.`)) {
+        problem(`frame_count.description no longer says "Omitted uses ${DEFAULT_FRAME_COUNT}."`);
+      }
       cmp("frame_duration_ms", "minimum", SCHEMA_CONTRACT.text_to_image.frame_duration_ms.minimum);
-      cmp("frame_duration_ms", "default", SCHEMA_CONTRACT.text_to_image.frame_duration_ms.default);
+      cmp("frame_duration_ms", "default", undefined);
+      if (!String(props.frame_duration_ms?.description || "").includes(`Omitted uses ${DEFAULT_FRAME_DURATION_MS}.`)) {
+        problem(`frame_duration_ms.description no longer says "Omitted uses ${DEFAULT_FRAME_DURATION_MS}."`);
+      }
       cmp("frame_size", "pattern", SCHEMA_CONTRACT.text_to_image.frame_size.pattern);
     } else {
       cmp("image_urls", "minItems", SCHEMA_CONTRACT.image_to_image.image_urls.minItems);
