@@ -3,7 +3,7 @@
 // contract check compares them and fails loudly when they drift.
 
 export const SKILL_ID = "hiapi-gpt-image-2-6";
-export const SKILL_VERSION = "1.0.0";
+export const SKILL_VERSION = "1.0.1";
 
 export const FAMILIES = Object.freeze({
   flare: "gpt-image-2.6-flare",
