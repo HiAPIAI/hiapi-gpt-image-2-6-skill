@@ -1,6 +1,6 @@
 # API contract
 
-All four model IDs are called through `POST https://api.hiapi.ai/v1/tasks` with
+All four model IDs are called through `POST https://api.hiapi.sh/v1/tasks` with
 `Authorization: Bearer $HIAPI_API_KEY`, `Content-Type: application/json`, and an
 `Idempotency-Key` of at most 255 UTF-8 bytes. `model` is top level and the
 parameters sit inside `input`.
@@ -72,7 +72,7 @@ Text-to-image also has an internal token cap on the upstream side that returns
 
 ## Pricing and estimates
 
-`--estimate` reads `https://api.hiapi.ai/api/pricing` and `/api/promotions`.
+`--estimate` reads `https://api.hiapi.sh/api/pricing` and `/api/promotions`.
 Rules are matched per model: every key in a policy's `rule` must equal the payload
 value (`match` may be an array, which is how the GIF rows list 1K/2K/4K), and the
 rule with the most keys wins. That is why an SVG request matches `SVG, LOW, 1K`

@@ -1,4 +1,4 @@
-// Public contract for GPT Image 2.6 (frozen 2026-11-06 from api.hiapi.ai).
+// Public contract for GPT Image 2.6 (frozen 2026-11-06 from api.hiapi.ai; default host is api.hiapi.sh since 2026-11-27).
 // Every constant here mirrors a live public schema or pricing row; the
 // contract check compares them and fails loudly when they drift.
 
@@ -31,8 +31,8 @@ export const LEGACY_2_5_MODELS = Object.freeze({
   "gpt-image-2.5-sunburst@pro": "gpt-image-2.6-sunburst",
 });
 
-export const DEFAULT_BASE_URL = "https://api.hiapi.ai";
-export const DEFAULT_SITE_URL = "https://api.hiapi.ai";
+export const DEFAULT_BASE_URL = "https://api.hiapi.sh";
+export const DEFAULT_SITE_URL = "https://api.hiapi.sh";
 export const HIAPI_API_KEYS_URL = "https://console.hiapi.ai/en/dashboard/api-keys";
 export const HIAPI_DASHBOARD_URL = "https://console.hiapi.ai/en/dashboard";
 export const HIAPI_PRICING_URL = "https://hiapi.ai/en/pricing";
