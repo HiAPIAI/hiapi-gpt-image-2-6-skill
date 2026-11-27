@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Default `HIAPI_BASE_URL` and `HIAPI_SITE_URL` now point at `https://api.hiapi.sh`.
+  `https://api.hiapi.ai` keeps working during the transition; set either variable
+  to override.
+
 ## 1.0.2 — 2026-11-19
 
 - `--check-contract` and the live contract check pass again. The public schema
